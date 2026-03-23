@@ -6,7 +6,7 @@ backend:
   name: github
   repo: juangervasoniph/juangervasoni.com
   branch: main
-  base_url: https://decap-proxy.juangervasoniph.workers.dev
+base_url: https://decap-proxy.juangervasoniph.workers.dev
 
 # Where uploaded images go in your repo
 media_folder: images/uploads
