@@ -1,50 +1,38 @@
-# juangervasoni.com — CMS Setup
+# juangervasoni.com — Complete Site
 
-## Folder structure added
-
+## File structure
 ```
+index.html          ← Main homepage
+blog.html           ← Blog listing page
+_redirects          ← Cloudflare Pages routing fix (DO NOT DELETE)
 admin/
-  index.html        ← Decap CMS entry point
-  config.yml        ← CMS configuration (collections, fields)
-  seo-preview.js    ← Live SEO widget (Yoast-style sidebar)
-
+  index.html        ← CMS entry point
+  config.yml        ← CMS config (UPDATE repo name here)
+  seo-preview.js    ← Live SEO widget
 blog/
-  sample-post.md    ← Example post (delete after testing)
-
+  sample-post.md    ← Example post (delete when you have real ones)
 _data/
-  hero.json         ← Hero section content
-  about.json        ← About section content
-  services.json     ← Services section content
+  hero.json         ← Hero content
+  about.json        ← About content
+  services.json     ← Services content
+images/             ← Add your images here
+  juan-gervasoni-profile.jpg   ← Your profile photo
+  icon-linkedin.svg
+  icon-whatsapp.svg
+  icon-email.svg
 ```
 
-## Setup steps
+## Before uploading
+1. Open admin/config.yml and replace:
+   - YOUR_GITHUB_USERNAME
+   - YOUR_REPO_NAME
 
-### 1. Edit config.yml
-Open `admin/config.yml` and replace:
-- `YOUR_GITHUB_USERNAME` with your GitHub username
-- `YOUR_REPO_NAME` with your repo name
+## Images needed
+Upload these to the images/ folder:
+- juan-gervasoni-profile.jpg  (your photo, used in hero + about)
+- icon-linkedin.svg
+- icon-whatsapp.svg
+- icon-email.svg
 
-### 2. Push to GitHub
-Upload all these files into your existing site repo.
-
-### 3. Set up GitHub OAuth
-1. Go to GitHub → Settings → Developer Settings → OAuth Apps → New OAuth App
-2. Homepage URL: `https://juangervasoni.com`
-3. Callback URL: `https://api.netlify.com/auth/done`
-4. Save the Client ID and Client Secret
-
-### 4. Add environment variables in Cloudflare Pages
-Go to your Cloudflare Pages project → Settings → Environment Variables and add:
-- `GITHUB_CLIENT_ID` = your GitHub OAuth App Client ID
-- `GITHUB_CLIENT_SECRET` = your GitHub OAuth App Client Secret
-
-### 5. Access the CMS
-Visit `https://juangervasoni.com/admin` and log in with GitHub.
-
-## Using the SEO widget
-When writing a blog post in the CMS, click the **Preview** toggle in the top right.
-You'll see a live sidebar with:
-- SEO score (0–100)
-- Real-time checks: title length, keyword usage, meta description, content length, keyword density
-- Character counters with progress bars for title and description
-- A live Google SERP snippet preview showing how your post will look in search results
+## Accessing the CMS
+Visit https://juangervasoni.com/admin after setup is complete.

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketing and video production insights from Juan Gervasoni. Real strategy, no fluff." />
+  <title>Blog — Juan Gervasoni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#f0ede6;--bg2:#e8e4dc;--surface:#fff;--ink:#0f0f0f;--muted:#6a6a6a;--border:rgba(0,0,0,.09);--border-dk:rgba(0,0,0,.22);--accent:#f05a00;--dark:#111;--fd:'Outfit',sans-serif;--fb:'Inter',sans-serif;}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    .container{max-width:1160px;margin:0 auto;padding:0 2rem}
+    .pill-tag{display:inline-block;font-family:var(--fd);font-size:.7rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink);background:var(--surface);border:1.5px solid var(--border-dk);padding:.32rem .9rem;border-radius:100px}
+    .btn-secondary{display:inline-flex;align-items:center;gap:.55rem;background:var(--surface);color:var(--ink);font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.82rem 1.9rem;border-radius:100px;border:1.5px solid var(--border-dk);text-decoration:none;transition:border-color .2s,color .2s}
+    .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+
+    /* NAV */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(240,237,230,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1160px;margin:0 auto;padding:0 2rem;height:66px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:.55rem;text-decoration:none}
+    .nav-logo-icon{width:30px;height:30px;background:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .nav-logo-icon svg{width:13px;height:13px;fill:#fff}
+    .nav-logo-text{font-family:var(--fd);font-size:1.15rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+    .nav-links{display:flex;align-items:center;gap:0;list-style:none}
+    .nav-links a{font-family:var(--fd);font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.38rem .8rem;border-radius:100px;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+    .nav-cta{font-family:var(--fd);font-size:.875rem;font-weight:700;color:#fff !important;background:var(--ink);padding:.48rem 1.2rem;border-radius:100px;text-decoration:none;transition:background .2s}
+    .nav-cta:hover{background:var(--accent) !important}
+    .nav-mobile-toggle{display:none;background:var(--surface);border:1.5px solid var(--border-dk);border-radius:8px;padding:.38rem;cursor:pointer;color:var(--ink)}
+    .nav-mobile-toggle svg{width:20px;height:20px;display:block}
+    .nav-mobile-menu{display:none;flex-direction:column;padding:1rem 2rem 1.5rem;border-top:1px solid var(--border);background:var(--bg)}
+    .nav-mobile-menu.open{display:flex}
+    .nav-mobile-menu a{font-family:var(--fd);font-size:.95rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.6rem 0;border-bottom:1px solid var(--border)}
+    .nav-mobile-cta-wrap{margin-top:.75rem}
+    .nav-mobile-cta-wrap a{display:inline-block;background:var(--ink);color:#fff;font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.7rem 1.75rem;border-radius:100px;text-decoration:none;border-bottom:none !important}
+
+    /* BLOG HERO */
+    .blog-hero{padding:8rem 0 4rem;background:var(--surface);border-bottom:1px solid var(--border)}
+    .blog-hero .pill-tag{margin-bottom:1.25rem;display:inline-block}
+    .blog-hero-h1{font-family:var(--fd);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;line-height:.95;letter-spacing:-.035em;text-transform:uppercase;color:var(--ink);margin-bottom:1rem}
+    .blog-hero-h1 .accent{color:var(--accent)}
+    .blog-hero-sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.8}
+
+    /* BLOG GRID */
+    .blog-section{padding:4rem 0 6rem}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .blog-card{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color .2s,transform .2s;text-decoration:none;display:block;color:inherit}
+    .blog-card:hover{border-color:var(--border-dk);transform:translateY(-3px)}
+    .blog-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--bg)}
+    .blog-card-img-placeholder{width:100%;aspect-ratio:16/9;background:var(--bg2);display:flex;align-items:center;justify-content:center}
+    .blog-card-img-placeholder span{font-family:var(--fd);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .blog-card-body{padding:1.5rem}
+    .blog-card-cat{font-family:var(--fd);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+    .blog-card-title{font-family:var(--fd);font-size:1.05rem;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:.6rem;letter-spacing:-.01em}
+    .blog-card-excerpt{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1rem}
+    .blog-card-meta{font-family:var(--fd);font-size:.72rem;color:var(--muted);font-weight:500}
+    .blog-empty{grid-column:1/-1;text-align:center;padding:4rem 2rem}
+    .blog-empty p{font-family:var(--fd);font-size:1rem;color:var(--muted);margin-bottom:1.5rem}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:2rem 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+    .footer-logo{display:flex;align-items:center;gap:.55rem}
+    .footer-logo-icon{width:27px;height:27px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+    .footer-logo-text{font-family:var(--fd);font-size:1rem;font-weight:800;color:#fff}
+    .footer-links{display:flex;gap:1.5rem}
+    .footer-links a{font-size:.82rem;color:rgba(255,255,255,.4);text-decoration:none;font-family:var(--fd);font-weight:500;transition:color .2s}
+    .footer-links a:hover{color:#fff}
+    .footer-copy{font-size:.78rem;color:rgba(255,255,255,.28);text-align:center;font-family:var(--fd)}
+
+    @media(max-width:960px){.blog-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.nav-links{display:none}.nav-mobile-toggle{display:flex}.blog-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 3l14 9L5 21V3z"/></svg></div>
+      <span class="nav-logo-text">JG.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#different">Why us</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#results">Results</a></li>
+      <li><a href="index.html#video">Video</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <a href="index.html#different">Why us</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#video">Video</a>
+    <a href="blog.html">Blog</a>
+    <div class="nav-mobile-cta-wrap"><a href="index.html#contact">Let's Talk</a></div>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div class="container">
+    <span class="pill-tag">From the blog</span>
+    <h1 class="blog-hero-h1">Marketing insights<br><span class="accent">that actually help.</span></h1>
+    <p class="blog-hero-sub">No fluff, no recycled tips. Real strategy from someone who runs campaigns for a living.</p>
+  </div>
+</div>
+
+<section class="blog-section">
+  <div class="container">
+    <div class="blog-grid" id="blog-grid">
+      <!-- PLACEHOLDER — replace with real posts once CMS is live -->
+      <a class="blog-card" href="#">
+        <div class="blog-card-img-placeholder"><span>Coming soon</span></div>
+        <div class="blog-card-body">
+          <p class="blog-card-cat">Marketing Strategy</p>
+          <h3 class="blog-card-title">Your first blog post title goes here</h3>
+          <p class="blog-card-excerpt">Write your first post via the CMS at /admin and it will appear here. Add a title, meta description, and focus keyword for the SEO widget to score it live.</p>
+          <p class="blog-card-meta">Juan Gervasoni</p>
+        </div>
+      </a>
+      <a class="blog-card" href="#">
+        <div class="blog-card-img-placeholder"><span>Coming soon</span></div>
+        <div class="blog-card-body">
+          <p class="blog-card-cat">Video Production</p>
+          <h3 class="blog-card-title">Second post placeholder</h3>
+          <p class="blog-card-excerpt">Once posts are published they will replace these cards. Each card links to the full post page automatically.</p>
+          <p class="blog-card-meta">Juan Gervasoni</p>
+        </div>
+      </a>
+      <a class="blog-card" href="#">
+        <div class="blog-card-img-placeholder"><span>Coming soon</span></div>
+        <div class="blog-card-body">
+          <p class="blog-card-cat">SEO</p>
+          <h3 class="blog-card-title">Third post placeholder</h3>
+          <p class="blog-card-excerpt">The SEO widget in the CMS scores your title length, keyword usage, meta description, and content length in real time as you write.</p>
+          <p class="blog-card-meta">Juan Gervasoni</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <span class="footer-logo-text">JG.</span>
+      </div>
+      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> JuanGervasoni — Marketing &amp; Video Production</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('mobile-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Juan Gervasoni is a senior marketing strategist and video editor serving US businesses. SEO, content strategy, landing pages, social media, Google Ads, Meta Ads and performance video without the overhead of a full marketing team." />
+  <meta name="keywords" content="marketing consultant for small business USA, SEO consultant for service businesses, video editing for social media ads, marketing specialist for vet clinics, fractional marketing team USA, performance video editing" />
+  <meta property="og:title" content="Juan Gervasoni — Marketing & Video for US Businesses" />
+  <meta property="og:description" content="Forget hiring a full marketing team. Senior marketing strategy and performance video built around your business, not a template." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <title>Juan Gervasoni · Senior Marketing Strategist & Video Editor for US Businesses</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"JuanGervasoni","description":"Senior marketing strategy and performance video editing for US businesses.","founder":{"@type":"Person","name":"Juan Gervasoni"},"areaServed":"US","url":"https://juangervasoni.com","email":"juangervasoniph@gmail.com","sameAs":["https://www.linkedin.com/in/juangervasoni/"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#f0ede6;--bg2:#e8e4dc;--surface:#fff;
+      --ink:#0f0f0f;--muted:#6a6a6a;
+      --border:rgba(0,0,0,.09);--border-md:rgba(0,0,0,.15);--border-dk:rgba(0,0,0,.22);
+      --accent:#f05a00;--accent-h:#d44e00;--accent-s:rgba(240,90,0,.07);
+      --dark:#111;--fd:'Outfit',sans-serif;--fb:'Inter',sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    ::selection{background:var(--accent);color:#fff}
+    .container{max-width:1160px;margin:0 auto;padding:0 2rem}
+    .pill-tag{display:inline-block;font-family:var(--fd);font-size:.7rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink);background:var(--surface);border:1.5px solid var(--border-dk);padding:.32rem .9rem;border-radius:100px}
+    .btn-primary{display:inline-flex;align-items:center;gap:.55rem;background:var(--ink);color:#fff;font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.82rem 1.9rem;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
+    .btn-primary:hover{background:var(--accent);transform:translateY(-1px)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:.55rem;background:var(--surface);color:var(--ink);font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.82rem 1.9rem;border-radius:100px;border:1.5px solid var(--border-dk);text-decoration:none;transition:border-color .2s,color .2s,transform .15s;white-space:nowrap}
+    .btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+
+    /* NAV */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(240,237,230,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+    #navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.07)}
+    .nav-inner{max-width:1160px;margin:0 auto;padding:0 2rem;height:66px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:.55rem;text-decoration:none}
+    .nav-logo-icon{width:30px;height:30px;background:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .nav-logo-icon svg{width:13px;height:13px;fill:#fff}
+    .nav-logo-text{font-family:var(--fd);font-size:1.15rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+    .nav-links{display:flex;align-items:center;gap:0;list-style:none}
+    .nav-links a{font-family:var(--fd);font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.38rem .8rem;border-radius:100px;transition:color .2s,background .2s}
+    .nav-links a:hover{color:var(--ink);background:rgba(0,0,0,.05)}
+    .nav-cta{font-family:var(--fd);font-size:.875rem;font-weight:700;color:#fff !important;background:var(--ink);padding:.48rem 1.2rem;border-radius:100px;text-decoration:none;transition:background .2s}
+    .nav-cta:hover{background:var(--accent) !important}
+    .nav-mobile-toggle{display:none;background:var(--surface);border:1.5px solid var(--border-dk);border-radius:8px;padding:.38rem;cursor:pointer;color:var(--ink)}
+    .nav-mobile-toggle svg{width:20px;height:20px;display:block}
+    .nav-mobile-menu{display:none;flex-direction:column;padding:1rem 2rem 1.5rem;border-top:1px solid var(--border);background:var(--bg)}
+    .nav-mobile-menu.open{display:flex}
+    .nav-mobile-menu a{font-family:var(--fd);font-size:.95rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.6rem 0;border-bottom:1px solid var(--border);transition:color .2s}
+    .nav-mobile-menu a:hover{color:var(--ink)}
+    .nav-mobile-cta-wrap{margin-top:.75rem}
+    .nav-mobile-cta-wrap a{display:inline-block;background:var(--ink);color:#fff;font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.7rem 1.75rem;border-radius:100px;text-decoration:none;border-bottom:none !important}
+
+    /* HERO */
+    #hero{padding-top:66px;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+    .hero-photo-col{position:relative;background:var(--dark);overflow:hidden;min-height:600px}
+    .hero-photo-col img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:contrast(1.02)}
+    .hero-photo-col::after{content:'';position:absolute;top:0;right:0;width:5px;height:100%;background:var(--accent)}
+    .hero-name-badge{position:absolute;bottom:2rem;left:2rem;background:var(--accent);color:#fff;font-family:var(--fd);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border-radius:100px}
+    .hero-text-col{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 4rem 4.5rem;background:var(--bg)}
+    .hero-eyebrow{margin-bottom:1.5rem}
+    .hero-h1{font-family:var(--fd);font-size:clamp(3rem,5.5vw,5.5rem);font-weight:900;line-height:.95;letter-spacing:-.035em;text-transform:uppercase;color:var(--ink);margin-bottom:1.75rem}
+    .hero-h1 .accent{color:var(--accent);display:block}
+    .hero-sub{font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:2.25rem;max-width:420px}
+    .hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:3rem}
+    .hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--border-dk);flex-wrap:wrap}
+    .hero-stat-num{font-family:var(--fd);font-size:1.75rem;font-weight:900;color:var(--ink);line-height:1;letter-spacing:-.03em}
+    .hero-stat-label{font-size:.78rem;color:var(--muted);margin-top:.25rem;font-family:var(--fd);font-weight:500}
+
+    /* TRUST BAR */
+    .trust-bar{padding:1.4rem 0;border-top:1px solid var(--border-dk);border-bottom:1px solid var(--border-dk)}
+    .trust-bar.on-light{background:var(--bg2)}
+    .trust-bar.on-dark{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
+    .trust-bar-inner{max-width:1160px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0}
+    .trust-bar-logo{font-family:var(--fd);font-size:.85rem;font-weight:700;padding:.28rem 1.25rem;border-right:1px solid var(--border-dk);white-space:nowrap;transition:color .2s}
+    .trust-bar.on-light .trust-bar-logo{color:var(--muted);border-color:var(--border-dk)}
+    .trust-bar.on-light .trust-bar-logo:hover{color:var(--ink)}
+    .trust-bar.on-dark .trust-bar-logo{color:rgba(255,255,255,.35);border-color:rgba(255,255,255,.08)}
+    .trust-bar.on-dark .trust-bar-logo:hover{color:rgba(255,255,255,.7)}
+    .trust-bar-logo:last-child{border-right:none}
+
+    /* SECTIONS */
+    section{padding:5.5rem 0}
+    .section-header{margin-bottom:3rem}
+    .section-header .pill-tag{margin-bottom:1.25rem;display:inline-block}
+    .section-h2{font-family:var(--fd);font-size:clamp(2.2rem,4.5vw,4rem);font-weight:900;line-height:.98;letter-spacing:-.03em;text-transform:uppercase;color:var(--ink);margin-bottom:1rem}
+    .section-h2 .accent{color:var(--accent)}
+    .section-sub{font-size:1rem;color:var(--muted);max-width:540px;line-height:1.8}
+
+    /* WHY DIFFERENT */
+    #different{background:var(--ink)}
+    .different-header{margin-bottom:2.5rem}
+    .different-header .pill-tag{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.12);margin-bottom:1.25rem}
+    .different-h2{font-family:var(--fd);font-size:clamp(2rem,4vw,3.5rem);font-weight:900;line-height:.98;letter-spacing:-.03em;text-transform:uppercase;color:#fff;margin-bottom:.75rem}
+    .different-h2 .accent{color:var(--accent)}
+    .different-sub{font-size:1rem;color:rgba(255,255,255,.5);max-width:580px;line-height:1.8}
+    .vs-table{width:100%;border-collapse:collapse;margin-top:2.5rem}
+    .vs-table thead tr th{font-family:var(--fd);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.9rem 1.5rem;text-align:left;border-bottom:1.5px solid rgba(255,255,255,.1)}
+    .vs-table thead tr th:first-child{color:rgba(255,255,255,.35);width:50%}
+    .vs-table thead tr th:last-child{color:var(--accent)}
+    .vs-table tbody tr{border-bottom:1px solid rgba(255,255,255,.06);transition:background .15s}
+    .vs-table tbody tr:last-child{border-bottom:none}
+    .vs-table tbody tr:hover{background:rgba(255,255,255,.03)}
+    .vs-table tbody tr td{padding:1.1rem 1.5rem;font-size:.9rem;line-height:1.6;vertical-align:top}
+    .vs-table tbody tr td:first-child{color:rgba(255,255,255,.4);position:relative;padding-left:2.25rem}
+    .vs-table tbody tr td:first-child::before{content:'';position:absolute;left:1.5rem;top:1.45rem;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2)}
+    .vs-table tbody tr td:last-child{color:rgba(240,240,240,.85);position:relative;padding-left:2.25rem}
+    .vs-table tbody tr td:last-child::before{content:'';position:absolute;left:1.5rem;top:1.45rem;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+    /* HOW WE WORK */
+    #how{background:var(--bg2)}
+    .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+    .how-card{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;padding:2rem;position:relative;transition:border-color .2s,transform .2s}
+    .how-card:hover{border-color:var(--border-dk);transform:translateY(-3px)}
+    .how-num{font-family:var(--fd);font-size:4rem;font-weight:900;color:var(--ink);opacity:.06;line-height:1;letter-spacing:-.04em;margin-bottom:.5rem}
+    .how-title{font-family:var(--fd);font-size:1.1rem;font-weight:800;color:var(--ink);margin-bottom:.75rem;letter-spacing:-.01em;text-transform:uppercase}
+    .how-desc{font-size:.9rem;color:var(--muted);line-height:1.8}
+
+    /* ABOUT */
+    #about{background:var(--surface)}
+    .about-grid{display:grid;grid-template-columns:400px 1fr;gap:5rem;align-items:center}
+    .about-img-wrap{position:relative}
+    .about-photo{width:100%;border-radius:14px;display:block;border:1px solid var(--border)}
+    .about-badge{position:absolute;bottom:-1.25rem;right:-1.25rem;background:var(--accent);border-radius:10px;padding:1rem 1.25rem;text-align:center;min-width:145px}
+    .about-badge-num{font-family:var(--fd);font-size:1.4rem;font-weight:900;color:#fff;display:block;line-height:1;letter-spacing:-.02em}
+    .about-badge-label{font-family:var(--fd);font-size:.67rem;font-weight:600;color:rgba(255,255,255,.85);margin-top:.3rem;line-height:1.3}
+    .about-text-col .pill-tag{margin-bottom:1.25rem;display:inline-block}
+    .about-h2{font-family:var(--fd);font-size:clamp(1.9rem,3.5vw,3rem);font-weight:900;line-height:.98;letter-spacing:-.03em;text-transform:uppercase;color:var(--ink);margin-bottom:1.25rem}
+    .about-h2 .accent{color:var(--accent)}
+    .about-bio p{font-size:.975rem;color:var(--muted);line-height:1.85;margin-bottom:1rem}
+    .about-bio p:last-child{margin-bottom:0}
+    .about-features{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:2rem}
+    .about-feature{display:flex;gap:.7rem;align-items:flex-start;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:.9rem;transition:border-color .2s}
+    .about-feature:hover{border-color:var(--border-dk)}
+    .feature-icon{width:34px;height:34px;background:var(--ink);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .feature-icon svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .feature-title{font-family:var(--fd);font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:.15rem}
+    .feature-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
+
+    /* SERVICES */
+    #services{background:var(--bg)}
+    .services-intro{font-size:1rem;color:var(--muted);max-width:600px;line-height:1.85;margin-bottom:2.5rem}
+    .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+    .service-card{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;padding:2.25rem;transition:border-color .25s,transform .2s;position:relative}
+    .service-card:hover{border-color:var(--border-dk);transform:translateY(-3px)}
+    .service-card.featured{border-color:var(--accent)}
+    .service-badge{display:inline-block;font-family:var(--fd);font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.27rem .8rem;border-radius:100px;margin-bottom:1.5rem}
+    .badge-entry{background:var(--bg);color:var(--ink);border:1.5px solid var(--border-dk)}
+    .badge-growth{background:var(--accent);color:#fff}
+    .service-num{font-family:var(--fd);font-size:3.8rem;font-weight:900;line-height:1;margin-bottom:.5rem;letter-spacing:-.04em;color:var(--ink);opacity:.07}
+    .service-title{font-family:var(--fd);font-size:1.55rem;font-weight:900;color:var(--ink);margin-bottom:.3rem;letter-spacing:-.025em;text-transform:uppercase}
+    .service-price{font-family:var(--fd);font-size:.78rem;font-weight:700;color:var(--accent);letter-spacing:.07em;text-transform:uppercase;margin-bottom:.75rem}
+    .service-subhead{font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.5rem;font-family:var(--fd)}
+    .service-desc{font-size:.875rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
+    .service-includes{list-style:none}
+    .service-includes li{font-size:.875rem;color:var(--ink);padding:.48rem 0;border-bottom:1px solid var(--border);display:flex;gap:.65rem;align-items:flex-start;line-height:1.45}
+    .service-includes li:last-child{border-bottom:none}
+    .service-includes li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:5px}
+    .services-note{font-size:.9rem;color:var(--muted);line-height:1.75;padding:1.25rem 1.75rem;background:var(--surface);border:1.5px solid var(--border);border-radius:12px;margin-top:1.25rem}
+    .services-note a{color:var(--accent);text-decoration:none;font-weight:600}
+    .services-note a:hover{text-decoration:underline}
+
+    /* RESULTS */
+    #results{background:var(--surface)}
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2.5rem}
+    .result-card{background:var(--bg);border:1.5px solid var(--border);border-radius:16px;padding:2rem;transition:border-color .2s}
+    .result-card:hover{border-color:var(--border-dk)}
+    .result-client{font-family:var(--fd);font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+    .result-num{font-family:var(--fd);font-size:2.3rem;font-weight:900;color:var(--ink);line-height:1;margin-bottom:.6rem;letter-spacing:-.03em;text-transform:uppercase}
+    .result-placeholder{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--border-dk);border:2px dashed var(--border-dk);border-radius:8px;padding:.5rem 1rem;display:inline-block;margin-bottom:.6rem;letter-spacing:.05em}
+    .result-label{font-size:.875rem;color:var(--muted);line-height:1.65}
+    .result-note{font-size:.72rem;color:var(--accent);font-family:var(--fd);font-weight:600;margin-top:.4rem;letter-spacing:.05em;text-transform:uppercase}
+
+    /* TESTIMONIALS */
+    .testimonials-track-wrap{overflow:hidden;position:relative;margin-top:1.25rem}
+    .testimonials-track-wrap::before,.testimonials-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+    .testimonials-track-wrap::before{left:0;background:linear-gradient(to right,var(--surface),transparent)}
+    .testimonials-track-wrap::after{right:0;background:linear-gradient(to left,var(--surface),transparent)}
+    .testimonials-track{display:flex;gap:1.25rem;width:max-content;animation:scroll-left 40s linear infinite}
+    .testimonials-track:hover{animation-play-state:paused}
+    @keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .testimonial-card{background:var(--ink);border-radius:16px;padding:2rem;position:relative;overflow:hidden;width:400px;flex-shrink:0}
+    .testimonial-card::before{content:'\201C';font-family:var(--fd);font-size:6rem;line-height:.8;color:var(--accent);position:absolute;top:.75rem;left:1.5rem;opacity:.25}
+    .testimonial-text{font-size:.875rem;color:rgba(240,240,240,.82);line-height:1.8;font-style:italic;position:relative;z-index:1;margin-bottom:1.5rem}
+    .testimonial-author{display:flex;align-items:center;gap:.75rem}
+    .testimonial-avatar{width:40px;height:40px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:.85rem;font-weight:700;color:#fff;flex-shrink:0}
+    .testimonial-name{font-family:var(--fd);font-size:.875rem;font-weight:700;color:#fff}
+    .testimonial-role{font-size:.72rem;color:rgba(240,240,240,.45);margin-top:.1rem;line-height:1.4}
+
+    /* VIDEO */
+    #video{background:var(--dark);color:#f0f0f0;position:relative;overflow:hidden}
+    #video::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent)}
+    .video-entry-label{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fd);font-size:.7rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);background:rgba(240,90,0,.1);border:1.5px solid rgba(240,90,0,.28);padding:.32rem .9rem;border-radius:100px;margin-bottom:1.75rem}
+    .video-entry-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+    .video-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:4rem}
+    .video-h2{font-family:var(--fd);font-size:clamp(2rem,3.5vw,3.2rem);font-weight:900;line-height:.98;letter-spacing:-.03em;text-transform:uppercase;color:#fff;margin-bottom:1rem}
+    .video-h2 .accent{color:var(--accent)}
+    .video-sub{font-size:.975rem;color:rgba(240,240,240,.6);line-height:1.85;margin-bottom:2rem}
+    .video-features{display:flex;flex-direction:column;gap:.85rem;margin-bottom:2rem}
+    .vf{display:flex;gap:.75rem;align-items:flex-start;font-size:.9rem;color:rgba(240,240,240,.65);line-height:1.5}
+    .vf strong{color:#fff;font-weight:600}
+    .vf-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px}
+    .video-note{font-size:.8rem;color:rgba(240,240,240,.35);margin-top:1rem;font-style:italic}
+    .video-stats-panel{background:#1a1a1a;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:2rem}
+    .vsp-title{font-family:var(--fd);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.5rem}
+    .vsp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem}
+    .vsp-num{font-family:var(--fd);font-size:2rem;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em}
+    .vsp-num .accent{color:var(--accent)}
+    .vsp-label{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.3rem;font-family:var(--fd)}
+    .vsp-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 0 1.5rem}
+    .vsp-clients{display:flex;flex-wrap:wrap;gap:.5rem}
+    .vsp-client{font-family:var(--fd);font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:.25rem .7rem;border-radius:100px}
+    .video-portfolio-label{font-family:var(--fd);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
+    .video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
+    .video-thumb{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,.07);background:#1a1a1a;transition:transform .2s,border-color .2s}
+    .video-thumb:hover{transform:translateY(-3px);border-color:var(--accent)}
+    .video-thumb img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:opacity .2s;display:block}
+    .video-thumb:hover img{opacity:.5}
+    .video-thumb-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:.75rem;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 60%)}
+    .video-thumb-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+    .video-thumb:hover .video-thumb-play{opacity:1}
+    .video-thumb-play::after{content:'';width:0;height:0;border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent #fff;margin-left:2px}
+    .video-thumb-title{font-family:var(--fd);font-size:.75rem;font-weight:700;color:#fff;line-height:1.3}
+    .video-thumb-cat{font-family:var(--fd);font-size:.62rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.2rem}
+
+    /* BLOG PREVIEW */
+    #blog-preview{background:var(--bg2)}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+    .blog-card{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color .2s,transform .2s;text-decoration:none;display:block;color:inherit}
+    .blog-card:hover{border-color:var(--border-dk);transform:translateY(-3px)}
+    .blog-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--bg)}
+    .blog-card-img-placeholder{width:100%;aspect-ratio:16/9;background:var(--bg);display:flex;align-items:center;justify-content:center}
+    .blog-card-img-placeholder span{font-family:var(--fd);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .blog-card-body{padding:1.5rem}
+    .blog-card-cat{font-family:var(--fd);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+    .blog-card-title{font-family:var(--fd);font-size:1.05rem;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:.6rem;letter-spacing:-.01em}
+    .blog-card-excerpt{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1rem}
+    .blog-card-meta{font-family:var(--fd);font-size:.72rem;color:var(--muted);font-weight:500}
+    .blog-footer{text-align:center;margin-top:2.5rem}
+
+    /* CONTACT */
+    #contact{background:var(--surface)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+    .contact-pill{margin-bottom:1.25rem;display:inline-block}
+    .contact-h2{font-family:var(--fd);font-size:clamp(2rem,4vw,3.5rem);font-weight:900;line-height:.98;letter-spacing:-.03em;text-transform:uppercase;color:var(--ink);margin-bottom:1rem}
+    .contact-h2 .accent{color:var(--accent)}
+    .contact-closer{font-size:1rem;color:var(--ink);line-height:1.8;margin-bottom:1.5rem;font-weight:500;padding-left:1.25rem;border-left:3px solid var(--accent)}
+    .contact-sub{font-size:.975rem;color:var(--muted);line-height:1.85;margin-bottom:2rem}
+    .contact-email-label,.contact-phone-label{font-family:var(--fd);font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+    .contact-phone-label{margin-top:1.25rem}
+    .contact-email,.contact-phone{display:block;font-size:1rem;font-weight:600;color:var(--accent);text-decoration:none;border-bottom:1px dotted currentColor;width:fit-content;transition:opacity .2s;font-family:var(--fd)}
+    .contact-email:hover,.contact-phone:hover{opacity:.7}
+    .social-links{display:flex;gap:.55rem;margin-top:2rem}
+    .social-link{width:40px;height:40px;background:var(--bg);border:1.5px solid var(--border-dk);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s}
+    .social-link:hover{border-color:var(--accent);background:var(--accent-s)}
+    .social-link img{width:18px;height:18px}
+    .cal-card{background:var(--bg);border:1.5px solid var(--border-dk);border-radius:16px;overflow:hidden}
+    .cal-header{padding:1.2rem 1.5rem;border-bottom:1px solid var(--border-dk);background:var(--surface)}
+    .cal-header h3{font-family:var(--fd);font-size:1.05rem;font-weight:800;color:var(--ink);text-transform:uppercase;letter-spacing:-.01em}
+    .cal-header h3 .accent{color:var(--accent)}
+    .cal-iframe-wrap{height:500px;overflow:hidden}
+    .cal-iframe-wrap>div{width:100%;height:100%}
+    .cal-footer{padding:.6rem 1.5rem;border-top:1px solid var(--border);font-size:.72rem;color:var(--muted);text-align:center;font-family:var(--fd);background:var(--surface)}
+
+    /* FOOTER */
+    footer{background:var(--ink);padding:2rem 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+    .footer-logo{display:flex;align-items:center;gap:.55rem}
+    .footer-logo-icon{width:27px;height:27px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+    .footer-logo-icon svg{width:13px;height:13px}
+    .footer-logo-text{font-family:var(--fd);font-size:1rem;font-weight:800;color:#fff;letter-spacing:-.01em}
+    .footer-links{display:flex;gap:1.5rem}
+    .footer-links a{font-size:.82rem;color:rgba(255,255,255,.4);text-decoration:none;font-family:var(--fd);font-weight:500;transition:color .2s}
+    .footer-links a:hover{color:#fff}
+    .footer-socials{display:flex;gap:.45rem}
+    .footer-socials a{width:31px;height:31px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s}
+    .footer-socials a:hover{border-color:var(--accent);background:rgba(240,90,0,.15)}
+    .footer-socials img{width:14px;height:14px;filter:brightness(.45)}
+    .footer-copy{font-size:.78rem;color:rgba(255,255,255,.28);text-align:center;font-family:var(--fd)}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    .hero-eyebrow{animation:fadeUp .55s .1s ease both}
+    .hero-h1{animation:fadeUp .55s .2s ease both}
+    .hero-sub{animation:fadeUp .55s .3s ease both}
+    .hero-btns{animation:fadeUp .55s .38s ease both}
+    .hero-stats{animation:fadeUp .55s .46s ease both}
+
+    @media(max-width:960px){
+      #hero{grid-template-columns:1fr;min-height:auto}
+      .hero-photo-col{min-height:420px}
+      .hero-photo-col::after{width:100%;height:4px;top:auto;bottom:0;right:0}
+      .hero-text-col{padding:3.5rem 2rem}
+      .about-grid{grid-template-columns:1fr;gap:3rem}
+      .about-img-wrap{max-width:360px}
+      .services-grid{grid-template-columns:1fr}
+      .results-grid{grid-template-columns:1fr 1fr}
+      .video-intro{grid-template-columns:1fr;gap:3rem}
+      .video-grid{grid-template-columns:repeat(2,1fr)}
+      .blog-grid{grid-template-columns:1fr 1fr}
+      .testimonial-card{width:320px}
+      .contact-grid{grid-template-columns:1fr;gap:3rem}
+      .how-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .nav-links{display:none}
+      .nav-mobile-toggle{display:flex}
+      .hero-stats{gap:1.75rem}
+      .results-grid{grid-template-columns:1fr}
+      .about-features{grid-template-columns:1fr}
+      .video-grid{grid-template-columns:repeat(2,1fr)}
+      .blog-grid{grid-template-columns:1fr}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+      .trust-bar-logo{font-size:.78rem;padding:.25rem .7rem}
+      .vs-table{display:block;overflow-x:auto}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 3l14 9L5 21V3z"/></svg></div>
+      <span class="nav-logo-text">JG.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#different">Why us</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <a href="#different">Why us</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#results">Results</a>
+    <a href="#video">Video</a>
+    <a href="blog.html">Blog</a>
+    <div class="nav-mobile-cta-wrap"><a href="#contact">Let's Talk</a></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-photo-col">
+    <!-- PLACEHOLDER: replace src with your photo -->
+    <img src="images/juan-gervasoni-profile.jpg" alt="Juan Gervasoni senior marketing strategist and video editor" />
+    <div class="hero-name-badge">Juan Gervasoni</div>
+  </div>
+  <div class="hero-text-col">
+    <div class="hero-eyebrow"><span class="pill-tag">Marketing &amp; Video Production</span></div>
+    <h1 class="hero-h1">Forget hiring<br>a full<span class="accent">marketing<br>team.</span></h1>
+    <p class="hero-sub">Most businesses don't need a 5-person agency eating $5,000 a month. They need one senior operator who knows what they're doing. SEO, content, landing pages, social media, and performance video from day one.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">See our services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#video" class="btn-secondary">View our work <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9L5 21V3z"/></svg></a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">5 yrs</div><p class="hero-stat-label">US marketing strategy</p></div>
+      <div><div class="hero-stat-num">12 yrs</div><p class="hero-stat-label">Video production</p></div>
+      <div><div class="hero-stat-num">2</div><p class="hero-stat-label">US brands led in-house</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section id="different">
+  <div class="container">
+    <div class="different-header">
+      <span class="pill-tag">What makes us different</span>
+      <h2 class="different-h2" style="margin-top:1.25rem;">Most agencies are built<br>for <span class="accent">agencies.</span> Not for you.</h2>
+      <p class="different-sub">You have probably worked with one before. Or gotten a proposal that looked great on paper and went nowhere. Here is what actually changes when you work with us.</p>
+    </div>
+    <table class="vs-table">
+      <thead><tr><th>Most agencies</th><th>JuanGervasoni</th></tr></thead>
+      <tbody>
+        <tr><td>Lock you into a 6-month contract before you see a single result</td><td>Month to month from day one. You stay because it works, not because you signed something</td></tr>
+        <tr><td>Assign your account to a junior after the sales call</td><td>You talk to Juan directly, every time. The person who sold you is the person doing the work</td></tr>
+        <tr><td>Send a strategy deck and call it a plan</td><td>First month you get a real 90-day plan with specific actions, timelines, and measurable goals</td></tr>
+        <tr><td>Make you adapt your business to fit their process</td><td>We learn your business first. The strategy adapts to you, not the other way around</td></tr>
+        <tr><td>Go quiet between monthly reports</td><td>You always know what is being done, what is next, and what the numbers say. No radio silence</td></tr>
+        <tr><td>Pad their team count with people who never touch your account</td><td>A lean team where every hour billed is an hour of senior work</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="how">
+  <div class="container">
+    <div class="section-header">
+      <span class="pill-tag">How we work</span>
+      <h2 class="section-h2">From first call to<br><span class="accent">full execution.</span></h2>
+      <p class="section-sub">Three steps from telling us about your business to having a senior operator running your marketing.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card"><div class="how-num">01</div><h3 class="how-title">Tell us about your business</h3><p class="how-desc">A 30-minute call where we learn your goals, your audience, what has been tried before, and what has not worked. We ask the questions your last agency never did.</p></div>
+      <div class="how-card"><div class="how-num">02</div><h3 class="how-title">We build your 90-day plan</h3><p class="how-desc">A specific roadmap built around your business, not a template. You see exactly what gets done, in what order, and what success looks like at 30, 60, and 90 days.</p></div>
+      <div class="how-card"><div class="how-num">03</div><h3 class="how-title">We execute. You stay in the loop.</h3><p class="how-desc">Work starts immediately. You get weekly visibility into what was done, what is next, and what the numbers say. Monthly report, monthly call. No surprises.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-col">
+        <div class="about-img-wrap">
+          <!-- PLACEHOLDER: replace src with your photo -->
+          <img class="about-photo" src="images/juan-gervasoni-profile.jpg" alt="Juan Gervasoni" />
+          <div class="about-badge"><span class="about-badge-num">12 yrs</span><p class="about-badge-label">Video · 5 yrs US Marketing</p></div>
+        </div>
+      </div>
+      <div class="about-text-col">
+        <span class="pill-tag">Who we are</span>
+        <h2 class="about-h2">A lean team.<br><span class="accent">Senior output.</span></h2>
+        <div class="about-bio">
+          <p>We are a small, specialized team led by Juan Gervasoni. 12 years in video production and 5 years running marketing strategy for US brands. We keep our client roster tight so the work never gets diluted.</p>
+          <p>You are not handed off to a junior account manager. You work directly with the person who built the strategy, understands your market, and is accountable for the results.</p>
+        </div>
+        <div class="about-features">
+          <div class="about-feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><p class="feature-title">Performance editing</p><p class="feature-desc">Every cut built around conversion. 12 years of video that had to perform, not just look good.</p></div></div>
+          <div class="about-feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div><p class="feature-title">Full-stack marketing</p><p class="feature-desc">SEO, content, landing pages, social, and paid ads. One team, one strategy, no handoffs.</p></div></div>
+          <div class="about-feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div><p class="feature-title">US brand experience</p><p class="feature-desc">Worked inside US companies, managed real budgets, and know what American audiences respond to.</p></div></div>
+          <div class="about-feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div><p class="feature-title">Senior operator model</p><p class="feature-desc">Not an agency with layers. You talk to us directly, every time. Strategy does not get lost.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="pill-tag">What we do</span>
+      <h2 class="section-h2">Two plans.<br><span class="accent">Built around<br>your business.</span></h2>
+    </div>
+    <p class="services-intro">We don't sell packages. We build strategies. What works for a vet clinic is not what works for a law firm, so before anything gets written, posted, or launched, we learn your business first.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-badge badge-entry">Best entry point</span>
+        <div class="service-num">01</div>
+        <h3 class="service-title">Starter</h3>
+        <p class="service-price">$900 / month</p>
+        <p class="service-subhead">Everything you need to get found, get traffic, and start converting.</p>
+        <p class="service-desc">The foundation every growing business needs. Organic visibility, consistent content, and landing pages built to convert, not just look good.</p>
+        <ul class="service-includes">
+          <li>Monthly SEO audit and on-page fixes</li>
+          <li>4 content pieces per month, keyword-mapped to your market</li>
+          <li>1 landing page build or conversion-focused update</li>
+          <li>WordPress technical maintenance</li>
+          <li>8 social posts scheduled and published monthly</li>
+          <li>Monthly performance report and strategy call</li>
+        </ul>
+      </div>
+      <div class="service-card featured">
+        <span class="service-badge badge-growth">Scale faster</span>
+        <div class="service-num">02</div>
+        <h3 class="service-title">Growth</h3>
+        <p class="service-price">$2,200 / month</p>
+        <p class="service-subhead">When you are ready to put budget behind what is already working.</p>
+        <p class="service-desc">Everything in Starter, plus paid media that actually converts. Google Ads and Meta Ads managed by someone who has run campaigns for real US brands with real budgets on the line.</p>
+        <ul class="service-includes">
+          <li>Everything in Starter</li>
+          <li>12 content pieces per month</li>
+          <li>2 landing pages per month</li>
+          <li>Google Ads — full campaign management</li>
+          <li>Meta Ads — audiences, creatives, and retargeting</li>
+          <li>Bi-weekly performance reports and strategy calls</li>
+        </ul>
+      </div>
+    </div>
+    <p class="services-note">Every engagement starts with a free 30-minute call. We will tell you honestly whether we are the right fit for where you are right now. <a href="#contact">Book the call →</a></p>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar on-light">
+  <div class="trust-bar-inner">
+    <span class="trust-bar-logo">Growth Marketers</span>
+    <span class="trust-bar-logo">BetterVet</span>
+    <span class="trust-bar-logo">FlexVet Staffing</span>
+    <span class="trust-bar-logo">Ad Pros</span>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="container">
+    <div class="section-header">
+      <span class="pill-tag">Track record</span>
+      <h2 class="section-h2">Work that moved<br><span class="accent">the needle.</span></h2>
+      <p class="section-sub">5 years running marketing strategy for US companies. Every result below was earned, not templated.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <p class="result-client">BetterVet</p>
+        <div class="result-placeholder">[X%] ↑</div>
+        <p class="result-label">Growth in organic social reach while running content strategy and video production across TikTok, Instagram, and Facebook.</p>
+        <p class="result-note">Replace with your real number</p>
+      </div>
+      <div class="result-card">
+        <p class="result-client">FlexVet Staffing</p>
+        <div class="result-placeholder">[X%] ↑</div>
+        <p class="result-label">Improvement in keyword rankings and inbound lead volume since taking over full digital strategy via Growth Marketers.</p>
+        <p class="result-note">Replace with your real number</p>
+      </div>
+      <div class="result-card">
+        <p class="result-client">Ad Pros</p>
+        <div class="result-num">$1M+</div>
+        <p class="result-label">Monthly ad spend managed across campaigns for US companies in multiple industries as Creative Lead at Ad Pros.</p>
+      </div>
+    </div>
+    <!-- TESTIMONIALS -->
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-track">
+        <div class="testimonial-card"><p class="testimonial-text">Juan was our go-to Social Media Manager who always had a keen eye for spotting the latest trends. He did an awesome job managing content across multiple platforms and was instrumental in boosting our brand awareness and social presence.</p><div class="testimonial-author"><div class="testimonial-avatar">KM</div><div><p class="testimonial-name">Kevin McReady</p><p class="testimonial-role">Head of Demand Generation at Continu. Managed Juan directly at BetterVet.</p></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">Juan is a creative powerhouse when it comes to concepting ideas and transforming them into impactful videos that stop scrolling and inspire action. He brings a high level of self-motivation, passion, and critical thinking to each project.</p><div class="testimonial-author"><div class="testimonial-avatar">KS</div><div><p class="testimonial-name">Kay Sorrells</p><p class="testimonial-role">Copywriter and Owner at SlyFoxCopy. Worked with Juan on the same team.</p></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">Juan was a wonderful colleague. We worked together generating creatives for different companies in different industries. He always had an eye for impressive detail and is excellent at graphic design, video editing, and producing a large number of creatives under tight deadlines.</p><div class="testimonial-author"><div class="testimonial-avatar">RD</div><div><p class="testimonial-name">Ruben Dario Rodriguez Torin</p><p class="testimonial-role">Creative Strategist. Worked with Juan on the same team.</p></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">Juan's editing skills are exceptional and his unwavering commitment to quality and project timelines is commendable. His positive attitude, problem-solving ability, and assertive communication skills make him a valuable asset to any project.</p><div class="testimonial-author"><div class="testimonial-avatar">OC</div><div><p class="testimonial-name">Oriana Contreras</p><p class="testimonial-role">Creative Project Manager. Collaborated with Juan on video production.</p></div></div></div>
+        <!-- duplicate for loop -->
+        <div class="testimonial-card"><p class="testimonial-text">Juan was our go-to Social Media Manager who always had a keen eye for spotting the latest trends. He did an awesome job managing content across multiple platforms and was instrumental in boosting our brand awareness and social presence.</p><div class="testimonial-author"><div class="testimonial-avatar">KM</div><div><p class="testimonial-name">Kevin McReady</p><p class="testimonial-role">Head of Demand Generation at Continu. Managed Juan directly at BetterVet.</p></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">Juan is a creative powerhouse when it comes to concepting ideas and transforming them into impactful videos that stop scrolling and inspire action. He brings a high level of self-motivation, passion, and critical thinking to each project.</p><div class="testimonial-author"><div class="testimonial-avatar">KS</div><div><p class="testimonial-name">Kay Sorrells</p><p class="testimonial-role">Copywriter and Owner at SlyFoxCopy. Worked with Juan on the same team.</p></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">Juan was a wonderful colleague. We worked together generating creatives for different companies in different industries. He always had an eye for impressive detail and is excellent at graphic design, video editing, and producing a large number of creatives under tight deadlines.</p><div class="testimonial-author"><div class="testimonial-avatar">RD</div><div><p class="testimonial-name">Ruben Dario Rodriguez Torin</p><p class="testimonial-role">Creative Strategist. Worked with Juan on the same team.</p></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">Juan's editing skills are exceptional and his unwavering commitment to quality and project timelines is commendable. His positive attitude, problem-solving ability, and assertive communication skills make him a valuable asset to any project.</p><div class="testimonial-author"><div class="testimonial-avatar">OC</div><div><p class="testimonial-name">Oriana Contreras</p><p class="testimonial-role">Creative Project Manager. Collaborated with Juan on video production.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+  <div class="container">
+    <div class="video-intro">
+      <div>
+        <div class="video-entry-label">Not ready for full marketing? Start here.</div>
+        <h2 class="video-h2">Video that <span class="accent">performs.</span><br>Not just plays.</h2>
+        <p class="video-sub">Most editors hand you a pretty cut and call it done. We edit for performance. Every frame is built around what stops the scroll, holds attention, and drives action.</p>
+        <div class="video-features">
+          <div class="vf"><div class="vf-dot"></div><div><strong>Performance-first editing</strong> — every cut built around conversion, not aesthetics</div></div>
+          <div class="vf"><div class="vf-dot"></div><div><strong>30-second social ads, reels, and short-form content</strong> — the formats that actually move product</div></div>
+          <div class="vf"><div class="vf-dot"></div><div><strong>48 to 72 hour turnaround</strong> — no agency back-and-forth, no waiting a week for a draft</div></div>
+          <div class="vf"><div class="vf-dot"></div><div><strong>Per-video or monthly retainer</strong> — whatever fits your volume and budget</div></div>
+        </div>
+        <a href="#contact" class="btn-primary">Get a sample edit</a>
+        <p class="video-note">Video is the lowest-commitment way to see how we work. Most clients who start here don't stop at video.</p>
+      </div>
+      <div>
+        <div class="video-stats-panel">
+          <p class="vsp-title">Video track record</p>
+          <div class="vsp-grid">
+            <div><div class="vsp-num">250<span class="accent">M+</span></div><p class="vsp-label">Total views generated</p></div>
+            <div><div class="vsp-num">12<span class="accent">yrs</span></div><p class="vsp-label">Editing for US brands</p></div>
+            <div><div class="vsp-num">$1<span class="accent">M+</span></div><p class="vsp-label">Monthly ad spend backed</p></div>
+            <div><div class="vsp-num">8<span class="accent">+</span></div><p class="vsp-label">US brands worked with</p></div>
+          </div>
+          <hr class="vsp-divider" />
+          <div class="vsp-clients">
+            <span class="vsp-client">BetterVet</span><span class="vsp-client">Happi AI</span><span class="vsp-client">Burpee</span><span class="vsp-client">Champion Sports</span><span class="vsp-client">Support Pets</span><span class="vsp-client">Norvell</span><span class="vsp-client">Meble Furniture</span><span class="vsp-client">Raw Access Media</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="video-portfolio-label">Selected work</p>
+    <div class="video-grid">
+      <div class="video-thumb" onclick="window.open('https://juangervasoni.myportfolio.com/bettervet','_blank')"><img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/54be85e9-9837-4646-bc6b-08b5151bf78a_rwc_197x0x805x630x32.png?h=f49a19dadfe36617c5d20045490c3a4d" alt="BetterVet" loading="lazy" /><div class="video-thumb-overlay"><div class="video-thumb-play"></div><p class="video-thumb-cat">Vet / Healthcare</p><p class="video-thumb-title">BetterVet</p></div></div>
+      <div class="video-thumb" onclick="window.open('https://juangervasoni.myportfolio.com/happi-ai','_blank')"><img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/2a302486-b1c7-4620-9bdb-ac5428c766a5_rwc_0x68x630x492x32.png?h=27e8cf215179b20bc367ba16d8a54b79" alt="Happi AI" loading="lazy" /><div class="video-thumb-overlay"><div class="video-thumb-play"></div><p class="video-thumb-cat">Tech / AI</p><p class="video-thumb-title">Happi AI</p></div></div>
+      <div class="video-thumb" onclick="window.open('https://juangervasoni.myportfolio.com/burpee','_blank')"><img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/fa35a3bf-7c8b-41c6-a0ea-efd81bb09f1b_rwc_0x68x630x492x32.png?h=4c22b9996e17380979863d82a372c4f8" alt="Burpee" loading="lazy" /><div class="video-thumb-overlay"><div class="video-thumb-play"></div><p class="video-thumb-cat">E-commerce</p><p class="video-thumb-title">Burpee</p></div></div>
+      <div class="video-thumb" onclick="window.open('https://juangervasoni.myportfolio.com/copia-de-norvell','_blank')"><img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/60dd3faa-3b21-4678-85b4-a6556435f2de_rwc_0x68x630x492x32.png?h=89ac1e4484bc3e8a4d2b813b6f3aad88" alt="Champion Sports" loading="lazy" /><div class="video-thumb-overlay"><div class="video-thumb-play"></div><p class="video-thumb-cat">Sports</p><p class="video-thumb-title">Champion Sports</p></div></div>
+      <div class="video-thumb" onclick="window.open('https://juangervasoni.myportfolio.com/supportpets','_blank')"><img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/7125e24d-6898-4cc2-bedb-9d02278be2a3_rwc_0x109x1000x781x32.png?h=6bd05ff1336df517dd1fb900dd775ad1" alt="Support Pets" loading="lazy" /><div class="video-thumb-overlay"><div class="video-thumb-play"></div><p class="video-thumb-cat">Pet care</p><p class="video-thumb-title">Support Pets</p></div></div>
+      <div class="video-thumb" onclick="window.open('https://juangervasoni.myportfolio.com/meblefurniture','_blank')"><img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/3b7236f8-2ba9-4ba3-973c-a10606ed9cb7_rwc_0x52x480x375x32.jpeg?h=4c227c335604e770e0857168a16a66bb" alt="Meble Furniture" loading="lazy" /><div class="video-thumb-overlay"><div class="video-thumb-play"></div><p class="video-thumb-cat">E-commerce</p><p class="video-thumb-title">Meble Furniture</p></div></div>
+      <div class="video-thumb" onclick="window.open('https://juangervasoni.myportfolio.com/copia-de-bettervet','_blank')"><img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/569e2925-0c65-4533-9a68-da014ef1a730_rwc_0x68x630x492x32.png?h=d1549ede3601abb19d9cb0030d01a7da" alt="Norvell" loading="lazy" /><div class="video-thumb-overlay"><div class="video-thumb-play"></div><p class="video-thumb-cat">Beauty / Lifestyle</p><p class="video-thumb-title">Norvell</p></div></div>
+      <div class="video-thumb" onclick="window.open('https://juangervasoni.myportfolio.com/94-sc','_blank')"><img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/4b9c4017-7e9c-493c-a495-68ce30866b78_rwc_0x122x1920x1501x32.jpg?h=d0df65a5361c0bc5ada06aa3710bbc25" alt="94 Supply Company" loading="lazy" /><div class="video-thumb-overlay"><div class="video-thumb-play"></div><p class="video-thumb-cat">Apparel</p><p class="video-thumb-title">94 Supply Co.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="https://juangervasoni.myportfolio.com" target="_blank" rel="noopener" class="btn-secondary">View full portfolio →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR VIDEO -->
+<div class="trust-bar on-dark">
+  <div class="trust-bar-inner">
+    <span class="trust-bar-logo">BetterVet</span><span class="trust-bar-logo">Happi AI</span><span class="trust-bar-logo">Burpee</span><span class="trust-bar-logo">Champion Sports</span><span class="trust-bar-logo">Support Pets</span><span class="trust-bar-logo">Meble Furniture</span><span class="trust-bar-logo">Norvell</span><span class="trust-bar-logo">Raw Access Media</span>
+  </div>
+</div>
+
+<!-- BLOG PREVIEW -->
+<section id="blog-preview">
+  <div class="container">
+    <div class="section-header">
+      <span class="pill-tag">From the blog</span>
+      <h2 class="section-h2">Marketing insights<br><span class="accent">that actually help.</span></h2>
+      <p class="section-sub">No fluff, no recycled tips. Real strategy from someone who runs campaigns for a living.</p>
+    </div>
+    <div class="blog-grid" id="blog-preview-grid">
+      <!-- PLACEHOLDER cards — will be replaced by script.js with real posts -->
+      <a class="blog-card" href="blog.html">
+        <div class="blog-card-img-placeholder"><span>Coming soon</span></div>
+        <div class="blog-card-body">
+          <p class="blog-card-cat">Marketing Strategy</p>
+          <h3 class="blog-card-title">Your first blog post title goes here</h3>
+          <p class="blog-card-excerpt">A short excerpt from your post will appear here. Write your first post in the CMS and it will show up automatically.</p>
+          <p class="blog-card-meta">Juan Gervasoni</p>
+        </div>
+      </a>
+      <a class="blog-card" href="blog.html">
+        <div class="blog-card-img-placeholder"><span>Coming soon</span></div>
+        <div class="blog-card-body">
+          <p class="blog-card-cat">Video Production</p>
+          <h3 class="blog-card-title">Second post title goes here</h3>
+          <p class="blog-card-excerpt">Once you publish posts via the CMS at /admin, they will replace these placeholder cards automatically.</p>
+          <p class="blog-card-meta">Juan Gervasoni</p>
+        </div>
+      </a>
+      <a class="blog-card" href="blog.html">
+        <div class="blog-card-img-placeholder"><span>Coming soon</span></div>
+        <div class="blog-card-body">
+          <p class="blog-card-cat">SEO</p>
+          <h3 class="blog-card-title">Third post title goes here</h3>
+          <p class="blog-card-excerpt">Add your focus keyword, meta description, and body content. The SEO widget in the CMS scores everything in real time.</p>
+          <p class="blog-card-meta">Juan Gervasoni</p>
+        </div>
+      </a>
+    </div>
+    <div class="blog-footer">
+      <a href="blog.html" class="btn-secondary">Read all posts →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="pill-tag contact-pill">Ready to start</span>
+        <h2 class="contact-h2">Let's find out<br>if we are <span class="accent">a fit.</span></h2>
+        <p class="contact-closer">Your marketing cannot look the same as everyone else's in your space. If nothing is different about how you show up, nothing will be different about your results. That is what we are here to fix.</p>
+        <p class="contact-sub">30 minutes. We learn about your business, you see how we think. If it makes sense, you get a proposal within 24 hours. No pitch decks, no pressure.</p>
+        <p class="contact-email-label">Email us directly</p>
+        <a href="mailto:juangervasoniph@gmail.com" class="contact-email">juangervasoniph@gmail.com</a>
+        <p class="contact-phone-label">Phone</p>
+        <a href="tel:+543425051187" class="contact-phone">+54 342 505 1187</a>
+        <div class="social-links">
+          <!-- PLACEHOLDER: replace icon srcs with your actual SVG icon files -->
+          <a href="https://www.linkedin.com/in/juangervasoni/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/icon-linkedin.svg" alt="LinkedIn" width="18" height="18"></a>
+          <a href="https://wa.me/543425051187" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="images/icon-whatsapp.svg" alt="WhatsApp" width="18" height="18"></a>
+          <a href="mailto:juangervasoniph@gmail.com" class="social-link" aria-label="Email"><img src="images/icon-email.svg" alt="Email" width="18" height="18"></a>
+        </div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-header"><h3>Book a <span class="accent">call</span></h3></div>
+        <div class="cal-iframe-wrap">
+          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-15min"></div>
+          <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", "15min", {origin:"https://app.cal.com"});
+            Cal.ns["15min"]("inline", { elementOrSelector:"#my-cal-inline-15min", config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"}, calLink: "juan-gervasoni-xjapqn/15min" });
+            Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+          </script>
+        </div>
+        <div class="cal-footer">Powered by Cal.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <span class="footer-logo-text">JG.</span>
+      </div>
+      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/juangervasoni/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/icon-linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://wa.me/543425051187" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a>
+        <a href="mailto:juangervasoniph@gmail.com" aria-label="Email"><img src="images/icon-email.svg" alt="Email"></a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> JuanGervasoni — Marketing &amp; Video Production</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('mobile-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  window.addEventListener('scroll', function() {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  });
+</script>
+</body>
+</html>
