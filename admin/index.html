@@ -6,7 +6,26 @@
     <title>JG Content Manager</title>
   </head>
   <body>
+    <script>
+      // Force fresh config load
+      window.CMS_MANUAL_INIT = true;
+    </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script src="/admin/seo-preview.js"></script>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'juangervasoniph/juangervasoni.com',
+            branch: 'main',
+            base_url: 'https://decap-proxy.juangervasoniph.workers.dev'
+          },
+          media_folder: 'images/uploads',
+          public_folder: '/images/uploads',
+          collections: []
+        }
+      });
+    </script>
   </body>
 </html>
