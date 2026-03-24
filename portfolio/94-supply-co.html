@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="94 Supply Co. video marketing case study — Juan Gervasoni. Lifestyle-driven campaign video that communicates brand identity and drives organic sharing." />
+  <title>94 Supply Co. — Portfolio | Juan Gervasoni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#f0ede6;--bg2:#e8e4dc;--surface:#fff;--ink:#0f0f0f;--muted:#6a6a6a;--border:rgba(0,0,0,.09);--border-dk:rgba(0,0,0,.22);--accent:#f05a00;--dark:#111;--fd:'Outfit',sans-serif;--fb:'Inter',sans-serif;}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    .container{max-width:1160px;margin:0 auto;padding:0 2rem}
+    .container-narrow{max-width:800px;margin:0 auto;padding:0 2rem}
+    .pill-tag{display:inline-block;font-family:var(--fd);font-size:.7rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink);background:var(--surface);border:1.5px solid var(--border-dk);padding:.32rem .9rem;border-radius:100px}
+    .btn-primary{display:inline-flex;align-items:center;gap:.55rem;background:var(--ink);color:#fff;font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.82rem 1.9rem;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s}
+    .btn-primary:hover{background:var(--accent);transform:translateY(-1px)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:.55rem;background:var(--surface);color:var(--ink);font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.82rem 1.9rem;border-radius:100px;border:1.5px solid var(--border-dk);text-decoration:none;transition:border-color .2s,color .2s}
+    .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+
+    /* NAV */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(240,237,230,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1160px;margin:0 auto;padding:0 2rem;height:66px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:.55rem;text-decoration:none}
+    .nav-logo-icon{width:30px;height:30px;background:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .nav-logo-icon svg{width:13px;height:13px;fill:#fff}
+    .nav-logo-text{font-family:var(--fd);font-size:1.15rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+    .nav-links{display:flex;align-items:center;gap:0;list-style:none}
+    .nav-links a{font-family:var(--fd);font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.38rem .8rem;border-radius:100px;transition:color .2s}
+    .nav-links a:hover{color:var(--ink)}
+    .nav-cta{font-family:var(--fd);font-size:.875rem;font-weight:700;color:#fff !important;background:var(--ink);padding:.48rem 1.2rem;border-radius:100px;text-decoration:none;transition:background .2s}
+    .nav-cta:hover{background:var(--accent) !important}
+    .nav-mobile-toggle{display:none;background:var(--surface);border:1.5px solid var(--border-dk);border-radius:8px;padding:.38rem;cursor:pointer;color:var(--ink)}
+    .nav-mobile-toggle svg{width:20px;height:20px;display:block}
+    .nav-mobile-menu{display:none;flex-direction:column;padding:1rem 2rem 1.5rem;border-top:1px solid var(--border);background:var(--bg)}
+    .nav-mobile-menu.open{display:flex}
+    .nav-mobile-menu a{font-family:var(--fd);font-size:.95rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.6rem 0;border-bottom:1px solid var(--border)}
+    .nav-mobile-cta-wrap{margin-top:.75rem}
+    .nav-mobile-cta-wrap a{display:inline-block;background:var(--ink);color:#fff;font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.7rem 1.75rem;border-radius:100px;text-decoration:none;border-bottom:none !important}
+
+    /* BACK BAR */
+    .back-bar{padding:.75rem 0;background:var(--surface);border-bottom:1px solid var(--border);margin-top:66px}
+    .back-link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fd);font-size:.8rem;font-weight:600;color:var(--muted);text-decoration:none;transition:color .2s}
+    .back-link:hover{color:var(--accent)}
+    .back-link svg{width:14px;height:14px}
+
+    /* PROJECT HERO */
+    .project-hero{background:var(--dark);padding:4rem 0 3rem;position:relative;overflow:hidden}
+    .project-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent)}
+    .project-eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem}
+    .project-cat{font-family:var(--fd);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+    .project-h1{font-family:var(--fd);font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:.95;letter-spacing:-.035em;text-transform:uppercase;color:#fff;margin-bottom:1rem}
+    .project-tagline{font-size:1.1rem;color:rgba(255,255,255,.6);max-width:600px;line-height:1.75;margin-bottom:2.5rem}
+    .project-meta{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1)}
+    .project-meta-item label{font-family:var(--fd);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:.3rem}
+    .project-meta-item span{font-family:var(--fd);font-size:.95rem;font-weight:600;color:#fff}
+
+    /* VIDEO EMBED */
+    .video-section{padding:4rem 0;background:var(--bg2)}
+    .video-embed-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:16px;overflow:hidden;background:var(--dark)}
+    .video-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+    .video-placeholder{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:#1a1a1a}
+    .video-placeholder-icon{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center}
+    .video-placeholder-icon::after{content:'';width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:4px}
+    .video-placeholder p{font-family:var(--fd);font-size:.85rem;font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.05em;text-transform:uppercase}
+
+    /* CONTENT */
+    .project-content{padding:4rem 0;background:var(--surface)}
+    .project-content h2{font-family:var(--fd);font-size:1.6rem;font-weight:900;color:var(--ink);letter-spacing:-.02em;text-transform:uppercase;margin-bottom:1rem}
+    .project-content h2 .accent{color:var(--accent)}
+    .project-content p{font-size:.975rem;color:var(--muted);line-height:1.85;margin-bottom:1rem}
+    .project-content p:last-child{margin-bottom:0}
+
+    /* DELIVERABLES */
+    .deliverables{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+    .deliverable-card{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:1.25rem}
+    .deliverable-card h4{font-family:var(--fd);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+    .deliverable-card p{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+    /* PHOTO GRID */
+    .photos-section{padding:4rem 0;background:var(--bg)}
+    .photos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+    .photo-placeholder{aspect-ratio:16/9;background:var(--bg2);border-radius:12px;border:1.5px dashed var(--border-dk);display:flex;align-items:center;justify-content:center}
+    .photo-placeholder span{font-family:var(--fd);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .photo-placeholder img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
+
+    /* RESULTS */
+    .results-section{padding:4rem 0;background:var(--surface)}
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+    .result-card{background:var(--bg);border:1.5px solid var(--border);border-radius:16px;padding:2rem}
+    .result-num{font-family:var(--fd);font-size:2.5rem;font-weight:900;color:var(--accent);line-height:1;margin-bottom:.5rem;letter-spacing:-.03em}
+    .result-label{font-size:.875rem;color:var(--muted);line-height:1.65}
+
+    /* NAV BETWEEN PROJECTS */
+    .project-nav{padding:3rem 0;background:var(--bg2);border-top:1px solid var(--border)}
+    .project-nav-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+    .project-nav-link{display:flex;flex-direction:column;gap:.3rem;text-decoration:none}
+    .project-nav-link label{font-family:var(--fd);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .project-nav-link span{font-family:var(--fd);font-size:1rem;font-weight:800;color:var(--ink);transition:color .2s}
+    .project-nav-link:hover span{color:var(--accent)}
+
+    /* CTA */
+    .project-cta{background:var(--ink);padding:5rem 0;text-align:center}
+    .project-cta h2{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;color:#fff;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:1rem}
+    .project-cta h2 .accent{color:var(--accent)}
+    .project-cta p{font-size:1rem;color:rgba(255,255,255,.5);margin-bottom:2rem}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:2rem 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+    .footer-logo{display:flex;align-items:center;gap:.55rem}
+    .footer-logo-icon{width:27px;height:27px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+    .footer-logo-text{font-family:var(--fd);font-size:1rem;font-weight:800;color:#fff}
+    .footer-links{display:flex;gap:1.5rem}
+    .footer-links a{font-size:.82rem;color:rgba(255,255,255,.4);text-decoration:none;font-family:var(--fd);transition:color .2s}
+    .footer-links a:hover{color:#fff}
+    .footer-copy{font-size:.78rem;color:rgba(255,255,255,.28);text-align:center;font-family:var(--fd)}
+
+    @media(max-width:960px){.deliverables{grid-template-columns:1fr 1fr}.results-grid{grid-template-columns:1fr 1fr}.photos-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.nav-links{display:none}.nav-mobile-toggle{display:flex}.deliverables{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr}.photos-grid{grid-template-columns:1fr}.project-meta{gap:1.5rem}.footer-inner{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 3l14 9L5 21V3z"/></svg></div>
+      <span class="nav-logo-text">JG.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#different">Why us</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <a href="index.html#different">Why us</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="portfolio">Portfolio</a>
+    <a href="blog">Blog</a>
+    <div class="nav-mobile-cta-wrap"><a href="index.html#contact">Let's Talk</a></div>
+  </div>
+</nav>
+
+<!-- BACK BAR -->
+<div class="back-bar">
+  <div class="container">
+    <a href="portfolio" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Portfolio
+    </a>
+  </div>
+</div>
+
+<!-- PROJECT HERO -->
+<div class="project-hero">
+  <div class="container">
+    <div class="project-eyebrow">
+      <span class="project-cat">Apparel</span>
+    </div>
+    <h1 class="project-h1">94 Supply Co.</h1>
+    <p class="project-tagline">Lifestyle-driven campaign video built to communicate brand identity and drive organic sharing. Editing that feels like culture, not advertising.</p>
+    <div class="project-meta">
+      <div class="project-meta-item"><label>Client</label><span>94 Supply Co.</span></div>
+      <div class="project-meta-item"><label>Service</label><span>Campaign Video & Brand Content</span></div>
+      <div class="project-meta-item"><label>Platforms</label><span>Instagram, TikTok, YouTube</span></div>
+      <div class="project-meta-item"><label>Type</label><span>Brand Campaign</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO -->
+<div class="video-section">
+  <div class="container">
+    <div class="video-embed-wrap">
+      <!-- PLACEHOLDER: replace with your Vimeo/YouTube embed URL -->
+      <!-- Example Vimeo: <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
+      <!-- Example YouTube: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon"></div>
+        <p>Add video embed when ready</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT CONTENT -->
+<div class="project-content">
+  <div class="container-narrow">
+    <h2>The <span class="accent">brief.</span></h2>
+    <p>94 Supply Co. needed video content that felt authentic to their community — not like a brand talking at their audience, but content that their audience would actually want to share.</p>
+    <p>In the apparel space, the brand is the product. The video had to communicate a lifestyle and an identity, not just a garment.</p>
+
+    <h2 style="margin-top:2.5rem">What we <span class="accent">did.</span></h2>
+    <p>We developed a campaign-style video approach that prioritized culture and community over product features. Editing style drew from music video and documentary aesthetics to create content that felt earned rather than manufactured.</p>
+    <p>Multiple short-form cuts were produced from the same shoot to maximize content output and allow platform-specific optimization.</p>
+
+    <div class="deliverables">
+      <div class="deliverable-card">
+        <h4>Content Strategy</h4>
+        <p>Platform-specific content calendars and format planning across TikTok, Instagram, and Facebook.</p>
+      </div>
+      <div class="deliverable-card">
+        <h4>Video Production</h4>
+        <p>Short-form educational and brand videos edited for each platform's native format and audience behavior.</p>
+      </div>
+      <div class="deliverable-card">
+        <h4>Performance Editing</h4>
+        <p>Hook-driven edits designed to maximize watch time, shares, and organic reach on each platform.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHOTOS -->
+<div class="photos-section">
+  <div class="container">
+    <span class="pill-tag">Selected frames</span>
+    <div class="photos-grid" style="margin-top:1.5rem">
+      <!-- PLACEHOLDER: replace with actual project images -->
+      <!-- <img src="images/bettervet-1.jpg" alt="BetterVet project screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:12px"> -->
+      <div class="photo-placeholder"><span>Photo 1</span></div>
+      <div class="photo-placeholder"><span>Photo 2</span></div>
+      <div class="photo-placeholder"><span>Photo 3</span></div>
+      <div class="photo-placeholder"><span>Photo 4</span></div>
+      <div class="photo-placeholder"><span>Photo 5</span></div>
+      <div class="photo-placeholder"><span>Photo 6</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="results-section">
+  <div class="container">
+    <span class="pill-tag">Results</span>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-num">[X]%</div>
+        <p class="result-label">Growth in organic social reach across all platforms</p>
+      </div>
+      <div class="result-card">
+        <div class="result-num">[X]%</div>
+        <p class="result-label">Increase in video views month over month</p>
+      </div>
+      <div class="result-card">
+        <div class="result-num">[X]%</div>
+        <p class="result-label">Improvement in engagement rate vs previous period</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT NAV -->
+<div class="project-nav">
+  <div class="container">
+    <div class="project-nav-inner">
+      <a href="portfolio" class="project-nav-link">
+        <label>All projects</label>
+        <span>← Back to Portfolio</span>
+      </a>
+      <a href="portfolio/bettervet" class="project-nav-link" style="text-align:right">
+        <label>Next project</label>
+        <span>BetterVet →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="project-cta">
+  <div class="container">
+    <h2>Want results like<br><span class="accent">this for your brand?</span></h2>
+    <p>Let's talk about what performance video can do for your business.</p>
+    <a href="index.html#contact" class="btn-primary">Get a sample edit →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <span class="footer-logo-text">JG.</span>
+      </div>
+      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> JuanGervasoni — Marketing &amp; Video Production</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('mobile-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
