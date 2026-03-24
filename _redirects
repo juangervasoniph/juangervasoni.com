@@ -1,6 +1,4 @@
 /admin/* /admin/:splat 200
 /admin /admin/index.html 200
 /portfolio /portfolio.html 301
-/portfolio.html /portfolio.html 200
 /blog /blog.html 301
-/blog.html /blog.html 200
