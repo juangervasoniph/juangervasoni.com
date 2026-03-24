@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Video production portfolio — Juan Gervasoni. 12+ years of performance video for US brands including BetterVet, Happi AI, Burpee, and more." />
+  <title>Portfolio — Juan Gervasoni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#f0ede6;--bg2:#e8e4dc;--surface:#fff;--ink:#0f0f0f;--muted:#6a6a6a;--border:rgba(0,0,0,.09);--border-dk:rgba(0,0,0,.22);--accent:#f05a00;--dark:#111;--fd:'Outfit',sans-serif;--fb:'Inter',sans-serif;}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    .container{max-width:1160px;margin:0 auto;padding:0 2rem}
+    .pill-tag{display:inline-block;font-family:var(--fd);font-size:.7rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink);background:var(--surface);border:1.5px solid var(--border-dk);padding:.32rem .9rem;border-radius:100px}
+    .btn-primary{display:inline-flex;align-items:center;gap:.55rem;background:var(--ink);color:#fff;font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.82rem 1.9rem;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s}
+    .btn-primary:hover{background:var(--accent);transform:translateY(-1px)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:.55rem;background:var(--surface);color:var(--ink);font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.82rem 1.9rem;border-radius:100px;border:1.5px solid var(--border-dk);text-decoration:none;transition:border-color .2s,color .2s}
+    .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+
+    /* NAV */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(240,237,230,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1160px;margin:0 auto;padding:0 2rem;height:66px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:.55rem;text-decoration:none}
+    .nav-logo-icon{width:30px;height:30px;background:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .nav-logo-icon svg{width:13px;height:13px;fill:#fff}
+    .nav-logo-text{font-family:var(--fd);font-size:1.15rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+    .nav-links{display:flex;align-items:center;gap:0;list-style:none}
+    .nav-links a{font-family:var(--fd);font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.38rem .8rem;border-radius:100px;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+    .nav-cta{font-family:var(--fd);font-size:.875rem;font-weight:700;color:#fff !important;background:var(--ink);padding:.48rem 1.2rem;border-radius:100px;text-decoration:none;transition:background .2s}
+    .nav-cta:hover{background:var(--accent) !important}
+    .nav-mobile-toggle{display:none;background:var(--surface);border:1.5px solid var(--border-dk);border-radius:8px;padding:.38rem;cursor:pointer;color:var(--ink)}
+    .nav-mobile-toggle svg{width:20px;height:20px;display:block}
+    .nav-mobile-menu{display:none;flex-direction:column;padding:1rem 2rem 1.5rem;border-top:1px solid var(--border);background:var(--bg)}
+    .nav-mobile-menu.open{display:flex}
+    .nav-mobile-menu a{font-family:var(--fd);font-size:.95rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.6rem 0;border-bottom:1px solid var(--border)}
+    .nav-mobile-cta-wrap{margin-top:.75rem}
+    .nav-mobile-cta-wrap a{display:inline-block;background:var(--ink);color:#fff;font-family:var(--fd);font-size:.9rem;font-weight:700;padding:.7rem 1.75rem;border-radius:100px;text-decoration:none;border-bottom:none !important}
+
+    /* HERO */
+    .portfolio-hero{padding:8rem 0 4rem;background:var(--dark);position:relative;overflow:hidden}
+    .portfolio-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent)}
+    .portfolio-hero .pill-tag{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.12);margin-bottom:1.25rem;display:inline-block}
+    .portfolio-hero-h1{font-family:var(--fd);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;line-height:.95;letter-spacing:-.035em;text-transform:uppercase;color:#fff;margin-bottom:1rem}
+    .portfolio-hero-h1 .accent{color:var(--accent)}
+    .portfolio-hero-sub{font-size:1rem;color:rgba(255,255,255,.5);max-width:520px;line-height:1.8;margin-bottom:2.5rem}
+    .portfolio-stats{display:flex;gap:3rem;flex-wrap:wrap}
+    .portfolio-stat-num{font-family:var(--fd);font-size:2rem;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em}
+    .portfolio-stat-num .accent{color:var(--accent)}
+    .portfolio-stat-label{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.3rem;font-family:var(--fd)}
+
+    /* FILTER */
+    .portfolio-filter{padding:2rem 0;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:66px;z-index:50}
+    .filter-inner{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+    .filter-btn{font-family:var(--fd);font-size:.8rem;font-weight:600;padding:.45rem 1rem;border-radius:100px;border:1.5px solid var(--border-dk);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s}
+    .filter-btn:hover{border-color:var(--ink);color:var(--ink)}
+    .filter-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+    /* GRID */
+    .portfolio-section{padding:4rem 0 6rem;background:var(--bg)}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .portfolio-card{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color .2s,transform .2s;cursor:pointer}
+    .portfolio-card:hover{border-color:var(--border-dk);transform:translateY(-3px)}
+    .portfolio-card[data-hidden="true"]{display:none}
+    .portfolio-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--bg2)}
+    .portfolio-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+    .portfolio-card:hover .portfolio-thumb img{transform:scale(1.03)}
+    .portfolio-thumb-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--bg2)}
+    .portfolio-thumb-placeholder span{font-family:var(--fd);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .portfolio-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+    .portfolio-card:hover .portfolio-play{opacity:1}
+    .portfolio-play::after{content:'';width:0;height:0;border-style:solid;border-width:7px 0 7px 12px;border-color:transparent transparent transparent #fff;margin-left:3px}
+    .portfolio-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 50%);opacity:0;transition:opacity .2s}
+    .portfolio-card:hover .portfolio-overlay{opacity:1}
+    .portfolio-body{padding:1.25rem 1.5rem}
+    .portfolio-cat{font-family:var(--fd);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+    .portfolio-title{font-family:var(--fd);font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:.4rem;letter-spacing:-.01em}
+    .portfolio-desc{font-size:.85rem;color:var(--muted);line-height:1.65}
+
+    /* MODAL */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;display:none;align-items:center;justify-content:center;padding:2rem}
+    .modal-overlay.open{display:flex}
+    .modal-box{background:var(--dark);border-radius:16px;overflow:hidden;max-width:860px;width:100%;position:relative}
+    .modal-video{position:relative;padding-bottom:56.25%;height:0}
+    .modal-video iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+    .modal-info{padding:1.5rem}
+    .modal-cat{font-family:var(--fd);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+    .modal-title{font-family:var(--fd);font-size:1.25rem;font-weight:800;color:#fff;margin-bottom:.5rem}
+    .modal-desc{font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.7}
+    .modal-close{position:absolute;top:1rem;right:1rem;width:34px;height:34px;background:rgba(255,255,255,.1);border:none;border-radius:50%;color:#fff;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10}
+    .modal-close:hover{background:var(--accent)}
+
+    /* CTA */
+    .portfolio-cta{background:var(--ink);padding:5rem 0;text-align:center}
+    .portfolio-cta h2{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;color:#fff;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:1rem}
+    .portfolio-cta h2 .accent{color:var(--accent)}
+    .portfolio-cta p{font-size:1rem;color:rgba(255,255,255,.5);margin-bottom:2rem}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:2rem 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+    .footer-logo{display:flex;align-items:center;gap:.55rem}
+    .footer-logo-icon{width:27px;height:27px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+    .footer-logo-text{font-family:var(--fd);font-size:1rem;font-weight:800;color:#fff}
+    .footer-links{display:flex;gap:1.5rem}
+    .footer-links a{font-size:.82rem;color:rgba(255,255,255,.4);text-decoration:none;font-family:var(--fd);font-weight:500;transition:color .2s}
+    .footer-links a:hover{color:#fff}
+    .footer-copy{font-size:.78rem;color:rgba(255,255,255,.28);text-align:center;font-family:var(--fd)}
+
+    @media(max-width:960px){.portfolio-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.nav-links{display:none}.nav-mobile-toggle{display:flex}.portfolio-grid{grid-template-columns:1fr}.portfolio-stats{gap:1.5rem}.footer-inner{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 3l14 9L5 21V3z"/></svg></div>
+      <span class="nav-logo-text">JG.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#different">Why us</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <a href="index.html#different">Why us</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <div class="nav-mobile-cta-wrap"><a href="index.html#contact">Let's Talk</a></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="portfolio-hero">
+  <div class="container">
+    <span class="pill-tag">Video Production</span>
+    <h1 class="portfolio-hero-h1">12+ years of video<br>that <span class="accent">actually performed.</span></h1>
+    <p class="portfolio-hero-sub">Every project below was built around a goal — more views, lower CPA, higher retention, stronger brand. Not just a pretty cut.</p>
+    <div class="portfolio-stats">
+      <div><div class="portfolio-stat-num">250<span class="accent">M+</span></div><p class="portfolio-stat-label">Total views generated</p></div>
+      <div><div class="portfolio-stat-num">$1<span class="accent">M+</span></div><p class="portfolio-stat-label">Monthly ad spend backed</p></div>
+      <div><div class="portfolio-stat-num">8<span class="accent">+</span></div><p class="portfolio-stat-label">US brands</p></div>
+      <div><div class="portfolio-stat-num">12<span class="accent">+</span></div><p class="portfolio-stat-label">Years experience</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="portfolio-filter">
+  <div class="container">
+    <div class="filter-inner" id="filter-btns">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+      <button class="filter-btn" data-filter="tech">Tech / AI</button>
+      <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+      <button class="filter-btn" data-filter="sports">Sports</button>
+      <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+    </div>
+  </div>
+</div>
+
+<!-- PORTFOLIO GRID -->
+<section class="portfolio-section">
+  <div class="container">
+    <div class="portfolio-grid" id="portfolio-grid">
+
+      <!-- CARD: BetterVet -->
+      <div class="portfolio-card" data-category="healthcare" data-video="https://player.vimeo.com/video/PLACEHOLDER" data-title="BetterVet" data-cat="Healthcare / Vet" data-desc="Social media video content strategy and production for BetterVet. TikTok, Instagram, and Facebook campaigns focused on organic growth and brand awareness.">
+        <div class="portfolio-thumb">
+          <img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/54be85e9-9837-4646-bc6b-08b5151bf78a_rwc_197x0x805x630x32.png?h=f49a19dadfe36617c5d20045490c3a4d" alt="BetterVet" loading="lazy" onerror="this.parentElement.innerHTML='<div class=portfolio-thumb-placeholder><span>BetterVet</span></div>'" />
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">Healthcare / Vet</p>
+          <h3 class="portfolio-title">BetterVet</h3>
+          <p class="portfolio-desc">Social content strategy, video production, and performance editing across TikTok, Instagram, and Facebook.</p>
+        </div>
+      </div>
+
+      <!-- CARD: Happi AI -->
+      <div class="portfolio-card" data-category="tech" data-video="https://player.vimeo.com/video/PLACEHOLDER" data-title="Happi AI" data-cat="Tech / AI" data-desc="Performance video ads for Happi AI. Short-form content designed to explain a complex product in under 30 seconds and drive app installs.">
+        <div class="portfolio-thumb">
+          <img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/2a302486-b1c7-4620-9bdb-ac5428c766a5_rwc_0x68x630x492x32.png?h=27e8cf215179b20bc367ba16d8a54b79" alt="Happi AI" loading="lazy" onerror="this.parentElement.innerHTML='<div class=portfolio-thumb-placeholder><span>Happi AI</span></div>'" />
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">Tech / AI</p>
+          <h3 class="portfolio-title">Happi AI</h3>
+          <p class="portfolio-desc">Short-form performance ads explaining a complex AI product in under 30 seconds. Built for app install campaigns.</p>
+        </div>
+      </div>
+
+      <!-- CARD: Burpee -->
+      <div class="portfolio-card" data-category="ecommerce" data-video="https://player.vimeo.com/video/PLACEHOLDER" data-title="Burpee" data-cat="E-commerce" data-desc="Product video and social content for Burpee. Seasonal campaigns built to drive e-commerce conversions across Meta and YouTube.">
+        <div class="portfolio-thumb">
+          <img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/fa35a3bf-7c8b-41c6-a0ea-efd81bb09f1b_rwc_0x68x630x492x32.png?h=4c22b9996e17380979863d82a372c4f8" alt="Burpee" loading="lazy" onerror="this.parentElement.innerHTML='<div class=portfolio-thumb-placeholder><span>Burpee</span></div>'" />
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">E-commerce</p>
+          <h3 class="portfolio-title">Burpee</h3>
+          <p class="portfolio-desc">Seasonal product campaigns built to drive e-commerce conversions across Meta and YouTube.</p>
+        </div>
+      </div>
+
+      <!-- CARD: Champion Sports -->
+      <div class="portfolio-card" data-category="sports" data-video="https://player.vimeo.com/video/PLACEHOLDER" data-title="Champion Sports" data-cat="Sports" data-desc="Brand and product video for Champion Sports. High-energy edits designed for paid social and organic reach.">
+        <div class="portfolio-thumb">
+          <img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/60dd3faa-3b21-4678-85b4-a6556435f2de_rwc_0x68x630x492x32.png?h=89ac1e4484bc3e8a4d2b813b6f3aad88" alt="Champion Sports" loading="lazy" onerror="this.parentElement.innerHTML='<div class=portfolio-thumb-placeholder><span>Champion Sports</span></div>'" />
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">Sports</p>
+          <h3 class="portfolio-title">Champion Sports</h3>
+          <p class="portfolio-desc">High-energy brand and product edits for paid social and organic reach.</p>
+        </div>
+      </div>
+
+      <!-- CARD: Support Pets -->
+      <div class="portfolio-card" data-category="healthcare" data-video="https://player.vimeo.com/video/PLACEHOLDER" data-title="Support Pets" data-cat="Pet care" data-desc="Direct response video ads for Support Pets. Hook-driven edits optimized to lower CPA on Meta campaigns.">
+        <div class="portfolio-thumb">
+          <img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/7125e24d-6898-4cc2-bedb-9d02278be2a3_rwc_0x109x1000x781x32.png?h=6bd05ff1336df517dd1fb900dd775ad1" alt="Support Pets" loading="lazy" onerror="this.parentElement.innerHTML='<div class=portfolio-thumb-placeholder><span>Support Pets</span></div>'" />
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">Pet care</p>
+          <h3 class="portfolio-title">Support Pets</h3>
+          <p class="portfolio-desc">Direct response video ads with hook-driven editing optimized to lower CPA on Meta.</p>
+        </div>
+      </div>
+
+      <!-- CARD: Meble Furniture -->
+      <div class="portfolio-card" data-category="ecommerce" data-video="https://player.vimeo.com/video/PLACEHOLDER" data-title="Meble Furniture" data-cat="E-commerce" data-desc="Product showcase and lifestyle video for Meble Furniture. Visual storytelling that communicates quality and drives purchase intent.">
+        <div class="portfolio-thumb">
+          <img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/3b7236f8-2ba9-4ba3-973c-a10606ed9cb7_rwc_0x52x480x375x32.jpeg?h=4c227c335604e770e0857168a16a66bb" alt="Meble Furniture" loading="lazy" onerror="this.parentElement.innerHTML='<div class=portfolio-thumb-placeholder><span>Meble Furniture</span></div>'" />
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">E-commerce</p>
+          <h3 class="portfolio-title">Meble Furniture</h3>
+          <p class="portfolio-desc">Product showcase and lifestyle video communicating quality and driving purchase intent.</p>
+        </div>
+      </div>
+
+      <!-- CARD: Norvell -->
+      <div class="portfolio-card" data-category="lifestyle" data-video="https://player.vimeo.com/video/PLACEHOLDER" data-title="Norvell" data-cat="Beauty / Lifestyle" data-desc="Brand video and social content for Norvell. Aspirational editing style built for Instagram and TikTok engagement.">
+        <div class="portfolio-thumb">
+          <img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/569e2925-0c65-4533-9a68-da014ef1a730_rwc_0x68x630x492x32.png?h=d1549ede3601abb19d9cb0030d01a7da" alt="Norvell" loading="lazy" onerror="this.parentElement.innerHTML='<div class=portfolio-thumb-placeholder><span>Norvell</span></div>'" />
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">Beauty / Lifestyle</p>
+          <h3 class="portfolio-title">Norvell</h3>
+          <p class="portfolio-desc">Aspirational brand video and social content built for Instagram and TikTok engagement.</p>
+        </div>
+      </div>
+
+      <!-- CARD: 94 Supply Co -->
+      <div class="portfolio-card" data-category="lifestyle" data-video="https://player.vimeo.com/video/PLACEHOLDER" data-title="94 Supply Co." data-cat="Apparel" data-desc="Campaign video for 94 Supply Co. Lifestyle-driven editing that communicates brand identity and drives organic sharing.">
+        <div class="portfolio-thumb">
+          <img src="https://cdn.myportfolio.com/438ae6f6-6833-46fb-80d1-d514b1258ea6/4b9c4017-7e9c-493c-a495-68ce30866b78_rwc_0x122x1920x1501x32.jpg?h=d0df65a5361c0bc5ada06aa3710bbc25" alt="94 Supply Company" loading="lazy" onerror="this.parentElement.innerHTML='<div class=portfolio-thumb-placeholder><span>94 Supply Co.</span></div>'" />
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">Apparel</p>
+          <h3 class="portfolio-title">94 Supply Co.</h3>
+          <p class="portfolio-desc">Lifestyle-driven campaign video communicating brand identity and driving organic sharing.</p>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER CARD — duplicate and fill in for new projects -->
+      <div class="portfolio-card" data-category="ecommerce" data-video="" data-title="Your Next Project" data-cat="Your Category" data-desc="This is a placeholder for your next project. Add a new card by duplicating this one in the HTML.">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-placeholder"><span>Your project here</span></div>
+          <div class="portfolio-play"></div>
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-body">
+          <p class="portfolio-cat">Add your category</p>
+          <h3 class="portfolio-title">Your Next Project</h3>
+          <p class="portfolio-desc">Duplicate this card to add new portfolio pieces. Replace the image, title, category, and description.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-video">
+      <iframe id="modal-iframe" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div class="modal-info">
+      <p class="modal-cat" id="modal-cat"></p>
+      <h3 class="modal-title" id="modal-title"></h3>
+      <p class="modal-desc" id="modal-desc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="portfolio-cta">
+  <div class="container">
+    <h2>Ready to make video that<br><span class="accent">actually converts?</span></h2>
+    <p>Most clients start with one project. Most don't stop there.</p>
+    <a href="index.html#contact" class="btn-primary">Get a sample edit →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <span class="footer-logo-text">JG.</span>
+      </div>
+      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> JuanGervasoni — Marketing &amp; Video Production</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('mobile-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+
+  // Filter
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      this.classList.add('active');
+      var filter = this.dataset.filter;
+      document.querySelectorAll('.portfolio-card').forEach(function(card) {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.removeAttribute('data-hidden');
+        } else {
+          card.setAttribute('data-hidden', 'true');
+        }
+      });
+    });
+  });
+
+  // Modal
+  var modal = document.getElementById('modal');
+  var iframe = document.getElementById('modal-iframe');
+
+  document.querySelectorAll('.portfolio-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      var video = this.dataset.video;
+      var title = this.dataset.title;
+      var cat = this.dataset.cat;
+      var desc = this.dataset.desc;
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-cat').textContent = cat;
+      document.getElementById('modal-desc').textContent = desc;
+      if (video && video.indexOf('PLACEHOLDER') === -1) {
+        iframe.src = video + '?autoplay=1';
+      } else {
+        iframe.src = '';
+      }
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  document.getElementById('modal-close').addEventListener('click', function() {
+    modal.classList.remove('open');
+    iframe.src = '';
+    document.body.style.overflow = '';
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+      iframe.src = '';
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+</body>
+</html>
